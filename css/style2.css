@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	font-size: 1rem;
+	font-family: sans-serif;
+	background-image:url(http://vignette1.wikia.nocookie.net/gravityfalls/images/1/14/S2e3_Mystery_Shack_new.png/revision/latest?cb=20140812231800);
+}
+
+
+h1, h2, h3, h4, h5, h6, ul, ol, p {
+	margin: 0;
+}
+
+.mobilelogo{
+	width:100px;
+	margin-top:5px;
+}
+
+.mobilenav{
+	z-index:-1;
+	background-color:rgb(138,69,56);
+	width:100%;
+	height:100%;
+	margin-top: 0;
+	position:absolute;
+	top:0;
+	opacity: 0;
+	transition:0.5s ease-in-out;
+}
+
+.mobilecat{
+	position:absolute;
+	top:100px;
+	left:150px;
+	text-align:center;
+}
+
+.mobilenav a{
+	text-decoration: none;
+	color:rgb(253,216,148);
+	font-weight: bold;
+	line-height: 2;
+}
+
+.clicked {
+	opacity: 1;
+	height:800px;
+	transition: 0.5s ease-in-out;
+}
+
+.burgerbutton{
+	position:absolute;
+	top:5px;
+	right:10px;
+}
+
+.burmenu{
+	width:30px;
+}
+
+img{
+	width:100%;
+}
+
+p + p {
+	margin-top: 1em;
+}
+
+.l-wrap {
+	z-index:3;
+	max-width: 30em;
+	margin-left:0;
+	margin-right:0;
+	margin-top:1em;
+}
+
+.accordion {
+	border: 1px solid black;
+}
+
+.accordion + .accordion {
+	border-top: 0;
+}
+
+.accordion__title {
+	font-size: 1.2em;
+	display: block;
+	color:rgb(253,216,148);
+	text-decoration: none;
+	padding: 1rem;
+	border-bottom: 1px solid black;
+	background-color:rgb(138,69,56);
+}
+
+.accordion__content {
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	color:rgb(253,216,148);
+	background-color: rgb(138,69,56);
+	visibility: hidden;
+	transition:
+	height 0.3s ease-in,
+	opacity 0.3s ease-in,
+}
+
+.accordion.is-shown .accordion__content {
+	height: auto;
+	visibility: visible;
+	opacity: 1;
+	transition:
+	height 0.3s ease-out,
+	opacity 0.3s ease-out;
+}
+
+.accordion__inner {
+	padding: 1rem 1rem;
+}
